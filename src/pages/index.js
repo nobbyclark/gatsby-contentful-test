@@ -1,10 +1,11 @@
-import React from "react"
-import { graphql, Link } from "gatsby"
-import Image from "gatsby-image"
-import Layout from "../components/layout"
+import React from 'react';
+import { graphql, Link } from 'gatsby';
+import Image from 'gatsby-image';
+import Layout from '../components/layout';
 
 const IndexPage = ({ data: { products } }) => (
   <Layout>
+    <h1>Dope App</h1>
     {products.edges.map(({ node: { id, title, image: { fixed } } }) => (
       <div key={id}>
         <h2>
@@ -14,9 +15,9 @@ const IndexPage = ({ data: { products } }) => (
       </div>
     ))}
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   {
@@ -38,4 +39,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
